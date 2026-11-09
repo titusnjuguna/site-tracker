@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Site Time Tracker",
+  "version": "1.0.0",
+  "description": "See how much time you spend on each website, with a simple daily chart. All data stays on your device.",
+  "permissions": ["tabs", "storage", "alarms", "idle"],
+  "background": {
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_title": "Site Time Tracker",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "site-time-tracker@example.local",
+      "strict_min_version": "115.0",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  }
+}

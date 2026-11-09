@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Time Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <button id="prev" class="nav" aria-label="Previous day">&lsaquo;</button>
+    <div class="when">
+      <h1 id="dayLabel">Today</h1>
+      <p id="dayDate"></p>
+    </div>
+    <button id="next" class="nav" aria-label="Next day">&rsaquo;</button>
+  </header>
+
+  <section class="total">
+    <span id="totalValue">0m</span>
+    <span class="total-label">on the web</span>
+  </section>
+
+  <section aria-label="Last 7 days">
+    <div id="week" class="week"></div>
+  </section>
+
+  <section aria-label="Sites">
+    <ul id="sites" class="sites"></ul>
+    <p id="empty" class="empty" hidden>Nothing tracked for this day yet. Browse a page and check back in a minute.</p>
+  </section>
+
+  <footer>
+    <button id="clear" class="link">Clear all data</button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
